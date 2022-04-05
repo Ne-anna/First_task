@@ -79,6 +79,7 @@ margin: 0;
   display: flex;
   flex-direction: column;
   background-color:#f4f1f1;
+  padding-bottom: 50px;
 }
 .flex-container{
   display: flex;
@@ -93,6 +94,7 @@ width: 45%;
 }
 .container-footer{
 text-align: center;
+background-color:#ece7e7;
 }
 .container-footer h5{
 color:black;
@@ -104,4 +106,7 @@ flex-direction: row;
 }
 .footer-logo img{
 width: 40px;
+}
+.footer-logo h5{
+  font-family: Lucida Handwriting;
 }
