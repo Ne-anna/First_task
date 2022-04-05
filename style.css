@@ -91,3 +91,17 @@ margin: 0;
 .flex-container img{
 width: 45%;
 }
+.container-footer{
+text-align: center;
+}
+.container-footer h5{
+color:black;
+font-weight: bold;
+}
+.logo-wrap{
+display: flex;
+flex-direction: row;
+}
+.footer-logo img{
+width: 40px;
+}
