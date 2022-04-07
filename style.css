@@ -71,7 +71,7 @@ body {
   flex-direction: column;
 }
 
-.about-image {
+.about-image-container {
   position: relative;
   height: 350px;
   padding: 10px;
@@ -124,7 +124,7 @@ body {
   padding-bottom: 80px;
 }
 
-.gallery-text {
+.gallery-heading {
   padding-top: 70px;
   margin: 0;
   font-size: 38px;
@@ -133,7 +133,7 @@ body {
   font-family: "Axis";
 }
 
-.gallery-text-more {
+.gallery-subheading {
   margin: 0;
   padding-bottom: 20px;
   font-size: 11px;
@@ -144,7 +144,7 @@ body {
   font-family: "Montserrat";
 }
 
-.gallery-flex {
+.gallery-container {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -152,22 +152,26 @@ body {
   gap: 10px;
 }
 
-.gallery-img {
+.gallery-imgage {
   width: 45%;
 }
 
-.footer {
+footer {
   text-align: center;
   background-color: #ece7e7;
 }
 
-.footer-text {
+.footer-heading {
   font-size: 12px;
   line-height: 25px;
   text-transform: uppercase;
   font-family: "Montserrat";
   color: #1e2633;
   font-weight: 700;
+}
+
+.footer-logo-image {
+  align-items: center;
 }
 
 .footer-renome {
