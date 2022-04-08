@@ -16,6 +16,16 @@
   src: url("../font/Pacifico-Regular.ttf") format("truetype");
 }
 
+:root {
+  --brown: #985e5b;
+  --white: #ffffff;
+  --coalblack: #1e2633;
+  --grey: #404040;
+  --darkergrey: #f4f1f1;
+  --footerbackground: #ece7e7;
+  --black: #000000;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -23,75 +33,97 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container-home {
+.carousel-container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0;
-  background-image: url(/images/carousel_img_1.png);
-  background-repeat: no-repeat;
   height: 600px;
-  background-size: contain;
-  padding-left: 30px;
 }
 
-.container-home h4 {
-  color: #ffffff;
+.carousel-images {
+  position: relative;
+  height: 600px;
+}
+
+.carousel-container img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-container-text {
+  position: relative;
+  margin-top: 310px;
+}
+
+.carousel-title {
+  color: var(--white);
   margin: 0;
-  margin-top: 290px;
-  font-size: 35px;
+  margin-left: 27px;
+  font-size: 28px;
+  letter-spacing: 3px;
   font-family: "Axis";
 }
 
-.container-home p {
-  color: #985e5b;
-  margin: 0;
-  font-size: 40px;
-  margin-bottom: 30px;
+.carousel-subtitle {
+  color: var(--brown);
+  margin-top: 10px;
+  margin-left: 27px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 700;
   font-family: "Montserrat";
 }
 
-.button {
+button {
   background-color: transparent;
-  border-color: #ffffff;
+  border-color: var(--white);
+  margin-top: 55px;
+  margin-left: 15px;
   font-size: 50px;
   width: 60px;
-  margin: 5px;
   border-style: solid;
 }
 
 .arrow {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .about {
-  padding: 0 5px;
-  padding-bottom: 100px;
-  padding-left: 50px;
   display: flex;
+  padding: 0 9px;
   flex-direction: column;
 }
 
-.about-image-container {
+.about__image-container {
+  padding: 30px 0;
   position: relative;
-  height: 350px;
-  padding: 10px;
+  width: 100%;
+  height: 400px;
 }
 
 .about-back-image {
   position: absolute;
-  right: 10px;
+  right: 0;
+  top: 15%;
 }
 
 .about-top-image {
   position: absolute;
-  top: 135px;
+  left: 0;
+  bottom: 15%;
+}
+.about__text-container {
+  padding-bottom: 50px;
 }
 
 .about-title {
-  font-size: 38px;
+  margin: 0;
   margin-bottom: 10px;
+  font-size: 38px;
   letter-spacing: 8px;
-  color: #1e2633;
+  color: var(--coalblack);
   font-family: "Axis";
 }
 
@@ -99,19 +131,18 @@ body {
   margin-top: 0;
   font-size: 11px;
   letter-spacing: 1px;
-  color: #985e5b;
+  color: var(--brown);
   font-weight: 700;
   font-family: "Montserrat";
   text-transform: uppercase;
 }
 
 .about-text {
-  width: 300px;
-  height: 370px;
+  margin: 0;
   font-size: 12px;
   letter-spacing: 2px;
   line-height: 30px;
-  color: #404040;
+  color: var(--grey);
   font-weight: 400;
   font-family: "Montserrat";
 }
@@ -119,17 +150,17 @@ body {
 .gallery {
   display: flex;
   flex-direction: column;
-  background-color: #f4f1f1;
+  background-color: var(--darkergrey);
   text-align: center;
   padding-bottom: 80px;
 }
 
 .gallery-heading {
-  padding-top: 70px;
   margin: 0;
+  margin-top: 70px;
   font-size: 38px;
   letter-spacing: 8px;
-  color: #1e2633;
+  color: var(--coalblack);
   font-family: "Axis";
 }
 
@@ -139,7 +170,7 @@ body {
   font-size: 11px;
   letter-spacing: 1px;
   line-height: 25px;
-  color: #985e5b;
+  color: var(--brown);
   text-transform: uppercase;
   font-family: "Montserrat";
 }
@@ -158,7 +189,7 @@ body {
 
 footer {
   text-align: center;
-  background-color: #ece7e7;
+  background-color: var(--footerbackground);
 }
 
 .footer-heading {
@@ -166,7 +197,7 @@ footer {
   line-height: 25px;
   text-transform: uppercase;
   font-family: "Montserrat";
-  color: #1e2633;
+  color: var(--coalblack);
   font-weight: 700;
 }
 
@@ -178,14 +209,14 @@ footer {
   font-family: "Pacifico";
   font-size: 20px;
   letter-spacing: 2px;
-  color: #1e2633;
+  color: var(--coalblack);
   font-weight: 400;
 }
 
 .footer-text-copyright {
   font-size: 12px;
   letter-spacing: 1px;
-  color: #1e2633;
+  color: var(--coalblack);
   font-family: "Axis";
   text-transform: uppercase;
 }
