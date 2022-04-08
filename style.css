@@ -33,6 +33,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.navigation {
+  padding: 0 9px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.navigation__logo {
+  font-family: "Pacifico";
+  font-size: 25px;
+  letter-spacing: 3px;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+}
+
 .carousel-container {
   position: relative;
   display: flex;
