@@ -21,8 +21,8 @@
   --white: #ffffff;
   --coalblack: #1e2633;
   --grey: #404040;
-  --darkergrey: #f4f1f1;
-  --footerbackground: #ece7e7;
+  --darkergrey: #f7f7f7;
+  --footerbackground: #edeff2;
   --black: #000000;
 }
 
@@ -34,7 +34,8 @@ body {
 }
 
 .navigation {
-  padding: 10px 9px;
+  padding: 0 9px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -53,15 +54,25 @@ body {
 .navigation-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .navigation-right-cart {
-  width: 25px;
+  width: 18px;
 }
 
+.navigation-count {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.navigation-divide {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: bold;
+}
 .naviagtion-right-burger {
-  width: 50px;
+  width: 30px;
 }
 
 .carousel-container {
@@ -90,7 +101,7 @@ body {
 .carousel-title {
   color: var(--white);
   margin: 0;
-  margin-left: 27px;
+  margin-left: 22px;
   font-size: 28px;
   letter-spacing: 3px;
   font-family: "Axis";
@@ -99,7 +110,7 @@ body {
 .carousel-subtitle {
   color: var(--brown);
   margin-top: 10px;
-  margin-left: 27px;
+  margin-left: 22px;
   font-size: 22px;
   letter-spacing: 2px;
   font-weight: 700;
@@ -109,8 +120,8 @@ body {
 button {
   background-color: transparent;
   border-color: var(--white);
-  margin-top: 55px;
-  margin-left: 15px;
+  margin-top: 50px;
+  margin-left: 22px;
   font-size: 50px;
   width: 60px;
   border-style: solid;
@@ -127,7 +138,7 @@ button {
 }
 
 .about-image-container {
-  padding: 30px 15px;
+  padding: 55px 0;
 }
 
 .about-image-grid {
@@ -237,6 +248,7 @@ footer {
 
 .footer-logo-image {
   align-items: center;
+  width: 10%;
 }
 
 .footer-renome {
