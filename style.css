@@ -54,7 +54,7 @@ body {
 .navigation-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
 }
 
 .navigation-right-cart {
@@ -62,15 +62,16 @@ body {
 }
 
 .navigation-count {
+  padding-top: 3px;
+  margin-left: 5px;
   font-size: 15px;
   font-weight: bold;
 }
 
 .navigation-divide {
-  color: var(--black);
-  font-size: 20px;
-  font-weight: bold;
+  height: 25px;
 }
+
 .naviagtion-right-burger {
   width: 30px;
 }
@@ -113,7 +114,6 @@ body {
   margin-left: 22px;
   font-size: 22px;
   letter-spacing: 2px;
-  font-weight: 700;
   font-family: "Montserrat";
 }
 
@@ -177,7 +177,6 @@ button {
   font-size: 11px;
   letter-spacing: 1px;
   color: var(--brown);
-  font-weight: 700;
   font-family: "Montserrat";
   text-transform: uppercase;
 }
@@ -188,7 +187,6 @@ button {
   letter-spacing: 2px;
   line-height: 30px;
   color: var(--grey);
-  font-weight: 400;
   font-family: "Montserrat";
 }
 
@@ -243,7 +241,7 @@ footer {
   text-transform: uppercase;
   font-family: "Montserrat";
   color: var(--coalblack);
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .footer-logo-image {
@@ -256,7 +254,6 @@ footer {
   font-size: 20px;
   letter-spacing: 2px;
   color: var(--coalblack);
-  font-weight: 400;
 }
 
 .footer-text-copyright {
