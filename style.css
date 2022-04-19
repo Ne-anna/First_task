@@ -246,9 +246,14 @@ footer {
   font-weight: bold;
 }
 
+.footer-logo {
+ display: flex;
+ justify-content: center;
+ gap:8px;
+}
+
 .footer-logo-image {
-  align-items: center;
-  width: 10%;
+  width: 30px;
 }
 
 .footer-renome {
