@@ -145,12 +145,12 @@ button {
 
 .about-image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(7, 1fr);
 }
 
 .about-back-image {
-  grid-area: 1 / 2 / 3 / 4;
+  grid-area: 1 / 2 / 5 / 11;
 }
 
 .about-image-grid img {
@@ -158,7 +158,7 @@ button {
 }
 
 .about-top-image {
-  grid-area: 2 / 1 / 4 / 3;
+  grid-area: 4 / 1 / 8 / 10;
 }
 
 .about-text-container {
