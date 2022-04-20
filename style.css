@@ -33,16 +33,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.navigation {
+nav {
   padding: 0 9px;
-  margin-bottom: 10px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  position: fixed;
+  z-index: 20;
+  background-color: var(--white);
+  width: 100%;
 }
 
-.navigation-left {
+.navigation-logo {
   font-family: "Pacifico";
   font-size: 25px;
   letter-spacing: 3px;
@@ -57,46 +58,45 @@ body {
   gap: 5px;
 }
 
-.navigation-right-cart {
+.navigation-right__cart {
   width: 18px;
 }
 
-.navigation-count {
+.navigation-right__count {
   padding-top: 3px;
   margin-left: 5px;
   font-size: 15px;
   font-weight: bold;
 }
 
-.navigation-divide {
+.navigation-right__divide {
   height: 25px;
 }
 
-.naviagtion-right-burger {
+.naviagtion-right__burger {
   width: 30px;
+  margin-right: 15px;
 }
 
-.carousel-container {
+.carousel {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 .carousel-images {
   position: relative;
-  min-height: 600px;
 }
 
-.carousel-container img {
-  position: absolute;
-  object-fit: cover;
+.carousel img {
   height: 100%;
   width: 100%;
 }
 
-.carousel-container-text {
-  position: relative;
-  margin-top: 310px;
+.carousel-text {
+  position: absolute;
+  bottom: 60px;
 }
 
 .carousel-title {
@@ -122,13 +122,14 @@ button {
   border-color: var(--white);
   margin-top: 50px;
   margin-left: 22px;
-  font-size: 50px;
   width: 60px;
+  height: 60px;
   border-style: solid;
 }
 
-.arrow {
-  color: var(--white);
+.carousel-arrow {
+  justify-items: center;
+  align-items: center;
 }
 
 .about {
@@ -137,26 +138,23 @@ button {
   flex-direction: column;
 }
 
-.about-image-container {
-  padding: 55px 0;
-}
-
 .about-image-grid {
+  padding: 55px 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(7, 1fr);
 }
 
-.about-back-image {
-  grid-area: 1 / 2 / 3 / 4;
+.about-image-grid__back {
+  grid-area: 1 / 2 / 5 / 11;
 }
 
 .about-image-grid img {
   width: 100%;
 }
 
-.about-top-image {
-  grid-area: 2 / 1 / 4 / 3;
+.about-image-grid__top {
+  grid-area: 4 / 1 / 8 / 10;
 }
 
 .about-text-container {
@@ -226,7 +224,7 @@ button {
   gap: 10px;
 }
 
-.gallery-imgage {
+.gallery-container__image {
   width: 45%;
 }
 
@@ -235,28 +233,32 @@ footer {
   background-color: var(--footerbackground);
 }
 
-.footer-heading {
+.footer-title {
   font-size: 12px;
   line-height: 25px;
   text-transform: uppercase;
   font-family: "Montserrat";
   color: var(--coalblack);
-  font-weight: bold;
 }
 
-.footer-logo-image {
-  align-items: center;
-  width: 10%;
+.footer-media {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
-.footer-renome {
+.footer-media__icon {
+  width: 30px;
+}
+
+.footer-logo {
   font-family: "Pacifico";
   font-size: 20px;
   letter-spacing: 2px;
   color: var(--coalblack);
 }
 
-.footer-text-copyright {
+.footer-copyright {
   font-size: 12px;
   letter-spacing: 1px;
   color: var(--coalblack);
