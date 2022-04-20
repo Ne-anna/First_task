@@ -43,7 +43,7 @@ body {
   width: 100%;
 }
 
-.navigation-left {
+.navigation-logo {
   font-family: "Pacifico";
   font-size: 25px;
   letter-spacing: 3px;
@@ -58,47 +58,45 @@ body {
   gap: 5px;
 }
 
-.navigation-right-cart {
+.navigation-right_cart {
   width: 18px;
 }
 
-.navigation-count {
+.navigation-right_count {
   padding-top: 3px;
   margin-left: 5px;
   font-size: 15px;
   font-weight: bold;
 }
 
-.navigation-divide {
+.navigation-right_divide {
   height: 25px;
 }
 
-.naviagtion-right-burger {
+.naviagtion-right_burger {
   width: 30px;
   margin-right: 15px;
 }
 
-.carousel-container {
+.carousel {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 .carousel-images {
   position: relative;
-  min-height: 600px;
 }
 
-.carousel-container img {
-  position: absolute;
-  object-fit: cover;
-  height: 100%;
+.carousel img {
+  height:100%;
   width: 100%;
 }
 
-.carousel-container-text {
-  position: relative;
-  margin-top: 310px;
+.carousel-text {
+  position: absolute;
+  bottom: 60px;
 }
 
 .carousel-title {
@@ -124,13 +122,14 @@ button {
   border-color: var(--white);
   margin-top: 50px;
   margin-left: 22px;
-  font-size: 50px;
   width: 60px;
+  height: 60px;
   border-style: solid;
 }
 
-.arrow {
-  color: var(--white);
+.carousel-arrow {
+  justify-items: center;
+  align-items: center;
 }
 
 .about {
@@ -139,17 +138,14 @@ button {
   flex-direction: column;
 }
 
-.about-image-container {
-  padding: 55px 0;
-}
-
 .about-image-grid {
+  padding: 55px 0;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(7, 1fr);
 }
 
-.about-back-image {
+.about-image-grid_back {
   grid-area: 1 / 2 / 5 / 11;
 }
 
@@ -157,7 +153,7 @@ button {
   width: 100%;
 }
 
-.about-top-image {
+.about-image-grid_top {
   grid-area: 4 / 1 / 8 / 10;
 }
 
@@ -228,7 +224,7 @@ button {
   gap: 10px;
 }
 
-.gallery-imgage {
+.gallery-container_image {
   width: 45%;
 }
 
@@ -237,33 +233,32 @@ footer {
   background-color: var(--footerbackground);
 }
 
-.footer-heading {
+.footer-title {
   font-size: 12px;
   line-height: 25px;
   text-transform: uppercase;
   font-family: "Montserrat";
   color: var(--coalblack);
-  font-weight: bold;
 }
 
-.footer-logo {
+.footer-media {
  display: flex;
  justify-content: center;
  gap:8px;
 }
 
-.footer-logo-image {
+.footer-media_icon {
   width: 30px;
 }
 
-.footer-renome {
+.footer-logo {
   font-family: "Pacifico";
   font-size: 20px;
   letter-spacing: 2px;
   color: var(--coalblack);
 }
 
-.footer-text-copyright {
+.footer-copyright {
   font-size: 12px;
   letter-spacing: 1px;
   color: var(--coalblack);
