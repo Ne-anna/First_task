@@ -35,19 +35,38 @@
 
     <main>
       <div class="carousel">
-        <div class="carousel-images">
+        <div class="carousel-item carousel-item__visible-right carousel-item__visible-left">
+          <div  class="carousel-text">
+            <p class="carousel-text__title">made with love</p>
+            <p class="carousel-text__subtitle">for you</p>
+          </div>
           <img
             src="/images/carousel_img_1.png"
-            alt="peper salt timian and knife"
+            alt="poke salad"
           />
         </div>
-        <div class="carousel-text">
-          <p class="carousel-title">made with love</p>
-          <p class="carousel-subtitle">for you</p>
-          <button class="carousel-arrow">
+        <div class="carousel-item">
+          <div  class="carousel-text">
+            <p class="carousel-text__title">muffin party</p>
+            <p class="carousel-text__subtitle">with us</p>
+          </div>
+          <img src="/images/carousel_img_2.png"
+          alt="cup of tea and muffin">
+        </div>
+        <div class="carousel-item">
+          <div  class="carousel-text">
+            <p class="carousel-text__title">salty peper and</p>
+            <p class="carousel-text__subtitle">a knife</p>
+          </div>
+          <img src="/images/carousel_img_3.png"
+          alt="peper salt rosmarin and knife">
+        </div>
+
+        <div class="carousel-action">
+          <button id="carousel_button-previous" class="carousel-action__button-arrow">
             <img src="/images/left_arrow_icon.svg" alt="arrow left" />
           </button>
-          <button class="carousel-arrow">
+          <button id="carousel_button-next" class="carousel-action__button-arrow">
             <img src="/images/right_arrow_icon.svg" alt="arrow right" />
           </button>
         </div>
@@ -153,5 +172,6 @@
       <p class="footer-logo">Renome</p>
       <p class="footer-copyright">Copyright 2015 renome by estetiq</p>
     </footer>
+    <script src="../script.js"></script>
   </body>
 </html>

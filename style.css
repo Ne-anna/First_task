@@ -80,13 +80,18 @@ nav {
 
 .carousel {
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   margin-top: 50px;
 }
 
-.carousel-images {
+.carousel-item {
   position: relative;
+}
+
+.carousel .carousel-item, .carousel-item__hidden {
+  display: none;
 }
 
 .carousel img {
@@ -94,12 +99,35 @@ nav {
   width: 100%;
 }
 
-.carousel-text {
+.carousel .carousel-item__visible-right {
+  display: block;
+  animation: fadeVisibilityRight 1s;
+}
+
+.carousel .carousel-item__visible-left {
+  display: block;
+  animation: fadeVisibilityLeft 1s;
+}
+
+.carousel .carousel-item__visible-right .carousel-text {
+  animation: textFadeRight 2s;
+}
+
+.carousel .carousel-item__visible-left .carousel-text {
+  animation: textFadeLeft 2s;
+}
+
+.carousel-action {
   position: absolute;
   bottom: 60px;
 }
 
-.carousel-title {
+.carousel-text {
+  position: absolute;
+  bottom: 170px;
+}
+
+.carousel-text__title {
   color: var(--white);
   margin: 0;
   margin-left: 22px;
@@ -108,7 +136,7 @@ nav {
   font-family: "Axis";
 }
 
-.carousel-subtitle {
+.carousel-text__subtitle {
   color: var(--brown);
   margin-top: 10px;
   margin-left: 22px;
@@ -117,7 +145,7 @@ nav {
   font-family: "Montserrat";
 }
 
-button {
+.carousel-action button {
   background-color: transparent;
   border-color: var(--white);
   margin-top: 50px;
@@ -127,7 +155,7 @@ button {
   border-style: solid;
 }
 
-.carousel-arrow {
+.carousel-action__button-arrow {
   justify-items: center;
   align-items: center;
 }
@@ -264,4 +292,45 @@ footer {
   color: var(--coalblack);
   font-family: "Axis";
   text-transform: uppercase;
+}
+
+
+@keyframes fadeVisibilityRight {
+  0% {
+      /* opacity: 0; */
+      transform: translateX(100%);
+  }
+  100% {
+      /* opacity: 1; */
+  }
+}
+
+@keyframes fadeVisibilityLeft {
+  0% {
+      /* opacity: 0; */
+      transform: translateX(-100%);
+  }
+  100% {
+      /* opacity: 1; */
+  }
+}
+
+@keyframes textFadeRight{
+  0% {
+      /* opacity: 0; */
+      transform: translateX(100%);
+  }
+  100% {
+      /* opacity: 1; */
+  }
+}
+
+@keyframes textFadeLeft {
+  0%{
+      /* opacity: 0; */
+      transform: translateX(-100%);
+  }
+  100%{
+      /* opacity: 1; */
+  }
 }
