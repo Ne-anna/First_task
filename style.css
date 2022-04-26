@@ -133,18 +133,18 @@ nav {
   animation: textFadeLeft 2s;
 }
 
-.carousel-action {
+.carousel-button {
   position: absolute;
   z-index: 2;
   bottom: 60px;
 }
 
-.carousel-text {
+.carousel-item--text {
   position: absolute;
   bottom: 170px;
 }
 
-.carousel-text__title {
+.carousel-item--text__title {
   color: var(--white);
   margin: 0;
   margin-left: 22px;
@@ -153,7 +153,7 @@ nav {
   font-family: "Axis";
 }
 
-.carousel-text__subtitle {
+.carousel-item--text__subtitle {
   color: var(--brown);
   margin-top: 10px;
   margin-left: 22px;
@@ -162,7 +162,7 @@ nav {
   font-family: "Montserrat";
 }
 
-.carousel-action button {
+.carousel-button button {
   background-color: transparent;
   border-color: var(--white);
   margin-top: 50px;
@@ -172,7 +172,7 @@ nav {
   border-style: solid;
 }
 
-.carousel-action__button-arrow {
+.button-arrow {
   justify-items: center;
   align-items: center;
 }

@@ -3,32 +3,32 @@ let slidePosition = 0;
 const slides = document.getElementsByClassName('carousel-item');
 const totalSlides = slides.length;
 
-const nextBtn = document.getElementById('carousel_button-next');
-nextBtn.addEventListener('click', moveToNextSlide)
+const nextButton = document.getElementById('carousel_button-next');
+nextButton.addEventListener('click', moveToNextSlide)
 
-const prevBtn = document.getElementById('carousel_button-previous');
-prevBtn.addEventListener('click', moveToPrevSlide);
+const previousButton = document.getElementById('carousel_button-previous');
+previousButton.addEventListener('click', moveToPrevSlide);
 
 function moveToNextSlide() {
-    if(slidePosition === totalSlides-1){
+    if (slidePosition === totalSlides - 1) {
         slidePosition = 0;
-    }else {
+    } else {
         slidePosition++;
     }
     updateSlidePositionRight();
  }
 
-function moveToPrevSlide(){
-    if(slidePosition === 0){
+function moveToPrevSlide() {
+    if(slidePosition === 0) {
         slidePosition = totalSlides - 1;
-    }else {
+    } else {
         slidePosition--;
     }
     updateSlidePositionLeft();
 }
 
 function updateSlidePositionRight() {
-    for(let slide of slides) {
+    for (let slide of slides) {
         slide.classList.remove('carousel-item__visible-right');
         slide.classList.remove('carousel-item__visible-left');
         slide.classList.remove('carousel-item__hidden-left');
@@ -41,7 +41,7 @@ function updateSlidePositionRight() {
 }
 
 function updateSlidePositionLeft() {
-    for(let slide of slides) {
+    for (let slide of slides) {
         slide.classList.remove('carousel-item__visible-left');
         slide.classList.remove('carousel-item__visible-right');
         slide.classList.remove('carousel-item__hidden-right');
