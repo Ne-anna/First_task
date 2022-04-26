@@ -31,24 +31,24 @@ function updateSlidePositionRight() {
     for(let slide of slides) {
         slide.classList.remove('carousel-item__visible-right');
         slide.classList.remove('carousel-item__visible-left');
+        slide.classList.remove('carousel-item__hidden-left');
         slide.classList.add('carousel-item__hidden-right');
     }
-    slides[slidePosition].classList.remove('carousel-item__start');
     slides[slidePosition].classList.add('carousel-item__visible-right');
     slides[slidePosition].classList.remove('carousel-item__hidden-left');
-    slides[slidePosition].classList.remove('carousel-item__visible-left'); //noņem visible left
-    slides[slidePosition].classList.remove('carousel-item__hidden-right'); //esošajam slaidam nepiešķir hidden   
+    slides[slidePosition].classList.remove('carousel-item__visible-left');
+    slides[slidePosition].classList.remove('carousel-item__hidden-right');    
 }
 
 function updateSlidePositionLeft() {
     for(let slide of slides) {
         slide.classList.remove('carousel-item__visible-left');
         slide.classList.remove('carousel-item__visible-right');
+        slide.classList.remove('carousel-item__hidden-right');
         slide.classList.add('carousel-item__hidden-left');
     }
     slides[slidePosition].classList.add('carousel-item__visible-left');
-    slides[slidePosition].classList.remove('carousel-item__start');
     slides[slidePosition].classList.remove('carousel-item__hidden-left');
-    slides[slidePosition].classList.remove('carousel-item__visible-right'); //esošajam nepiešķir visible right
-    slides[slidePosition].classList.remove('carousel-item__hidden-right'); //esošajam slaidam nepiešķir hidden   
+    slides[slidePosition].classList.remove('carousel-item__visible-right');
+    slides[slidePosition].classList.remove('carousel-item__hidden-right');   
 }

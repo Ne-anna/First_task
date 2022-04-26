@@ -16,8 +16,6 @@
   src: url("../font/Pacifico-Regular.ttf") format("truetype");
 }
 
-
-
 :root {
   --brown: #985e5b;
   --white: #ffffff;
@@ -86,16 +84,12 @@ nav {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  height: 139vw;
 }
 
-.carousel .carousel-item  {
-  /* position: absolute; */
-  width: 100%;
-  /* display: none; */
-}
-
-.carousel-item__start {
+.carousel .carousel-item {
   position: absolute;
+  width: 100%;
 }
 
 .carousel-item__hidden-right {
@@ -103,7 +97,7 @@ nav {
   top: 0;
   left: -100%;
   width: 100%;
-  animation: testFrame 1s;
+  animation: slideToRight 1s;
 }
 
 .carousel-item__hidden-left {
@@ -111,7 +105,7 @@ nav {
   top: 0;
   right: -100%;
   width: 100%;
-  animation: testFrame2 1s;
+  animation: slideToLeft 1s;
 }
 
 .carousel img {
@@ -128,7 +122,6 @@ nav {
 .carousel .carousel-item__visible-left {
   display: block;
   z-index: 1;
-  /* animation: testFrame2 1s; */
   animation: fadeVisibilityLeft 1s;
 }
 
@@ -318,16 +311,8 @@ footer {
   text-transform: uppercase;
 }
 
-@keyframes testFrameLeft {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0%;
-  }
-}
 
-@keyframes testFrame2 {
+@keyframes slideToLeft {
   0% {
     right: 0%;
   }
@@ -336,16 +321,7 @@ footer {
   }
 }
 
-@keyframes testFrameRight {
-  0% {
-    right: -100%;
-  }
-  100% {
-    right: 0%;
-  }
-}
-
-@keyframes testFrame {
+@keyframes slideToRight {
   0% {
     left: 0%;
   }
@@ -356,40 +332,32 @@ footer {
 
 @keyframes fadeVisibilityRight {
   0% {
-      /* opacity: 0; */
       transform: translateX(100%);
   }
   100% {
-      /* opacity: 1; */
   }
 }
 
 @keyframes fadeVisibilityLeft {
   0% {
-      /* opacity: 0; */
       transform: translateX(-100%);
   }
   100% {
-      /* opacity: 1; */
   }
 }
 
 @keyframes textFadeRight{
   0% {
-      /* opacity: 0; */
       transform: translateX(100%);
   }
   100% {
-      /* opacity: 1; */
   }
 }
 
 @keyframes textFadeLeft {
   0%{
-      /* opacity: 0; */
       transform: translateX(-100%);
   }
   100%{
-      /* opacity: 1; */
   }
 }
