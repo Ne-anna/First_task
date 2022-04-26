@@ -16,6 +16,8 @@
   src: url("../font/Pacifico-Regular.ttf") format("truetype");
 }
 
+
+
 :root {
   --brown: #985e5b;
   --white: #ffffff;
@@ -86,12 +88,30 @@ nav {
   margin-top: 50px;
 }
 
-.carousel-item {
-  position: relative;
+.carousel .carousel-item  {
+  /* position: absolute; */
+  width: 100%;
+  /* display: none; */
 }
 
-.carousel .carousel-item, .carousel-item__hidden {
-  display: none;
+.carousel-item__start {
+  position: absolute;
+}
+
+.carousel-item__hidden-right {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  animation: testFrame 1s;
+}
+
+.carousel-item__hidden-left {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  animation: testFrame2 1s;
 }
 
 .carousel img {
@@ -101,11 +121,14 @@ nav {
 
 .carousel .carousel-item__visible-right {
   display: block;
+  z-index: 1;
   animation: fadeVisibilityRight 1s;
 }
 
 .carousel .carousel-item__visible-left {
   display: block;
+  z-index: 1;
+  /* animation: testFrame2 1s; */
   animation: fadeVisibilityLeft 1s;
 }
 
@@ -119,6 +142,7 @@ nav {
 
 .carousel-action {
   position: absolute;
+  z-index: 2;
   bottom: 60px;
 }
 
@@ -294,6 +318,41 @@ footer {
   text-transform: uppercase;
 }
 
+@keyframes testFrameLeft {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes testFrame2 {
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: -100%;
+  }
+}
+
+@keyframes testFrameRight {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes testFrame {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
 
 @keyframes fadeVisibilityRight {
   0% {
