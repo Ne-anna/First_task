@@ -35,19 +35,38 @@
 
     <main>
       <div class="carousel">
-        <div class="carousel-images">
+        <div class="carousel-item">
+          <div class="carousel-item--text">
+            <h2 class="carousel-item--text__title">made with love</h2>
+            <h5 class="carousel-item--text__subtitle">for you</h5>
+          </div>
           <img
             src="/images/carousel_img_1.png"
-            alt="peper salt timian and knife"
+            alt="eggs and chicken"
           />
         </div>
-        <div class="carousel-text">
-          <p class="carousel-title">made with love</p>
-          <p class="carousel-subtitle">for you</p>
-          <button class="carousel-arrow">
+        <div class="carousel-item">
+          <div  class="carousel-item--text">
+            <h2 class="carousel-item--text__title">Made with hate</h2>
+            <h5 class="carousel-item--text__subtitle">for myself</h5>
+          </div>
+          <img src="/images/carousel_img_2.png"
+          alt="something more">
+        </div>
+        <div class="carousel-item">
+          <div  class="carousel-item--text">
+            <h2 class="carousel-item--text__title">Oranges and laptops</h2>
+            <h5 class="carousel-item--text__subtitle">for everyone</h5>
+          </div>
+          <img src="/images/carousel_img_3.png"
+          alt="oranges and laptops">
+        </div>
+
+        <div class="carousel-button">
+          <button id="carousel_button-previous" class="button-arrow">
             <img src="/images/left_arrow_icon.svg" alt="arrow left" />
           </button>
-          <button class="carousel-arrow">
+          <button id="carousel_button-next" class="button-arrow">
             <img src="/images/right_arrow_icon.svg" alt="arrow right" />
           </button>
         </div>
@@ -151,7 +170,8 @@
         </a>
       </div>
       <p class="footer-logo">Renome</p>
-      <p class="footer-copyright">Copyright 2015 renome by estetiq</p>
+      <p class="footer-copyright">Copyright 2022 renome by estetiq</p>
     </footer>
+    <script src="../script.js"></script>
   </body>
 </html>
