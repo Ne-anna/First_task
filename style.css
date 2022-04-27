@@ -148,11 +148,11 @@ nav {
   animation: fadeVisibilityLeft 1s;
 }
 
-.carousel .carousel-item__visible-right .carousel-text {
+.carousel .carousel-item__visible-right .carousel-item--text {
   animation: textFadeRight 2s;
 }
 
-.carousel .carousel-item__visible-left .carousel-text {
+.carousel .carousel-item__visible-left .carousel-item--text {
   animation: textFadeLeft 2s;
 }
 
