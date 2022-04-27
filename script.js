@@ -1,4 +1,23 @@
 
+const main = document.querySelector('main');
+const footer = document.querySelector('footer');
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener('click', activeSlide);
+main.onclick = closeSlide;
+footer.onclick = closeSlide;
+
+function activeSlide() {
+    hamburger.classList.toggle("active");
+    // navMenu.classList.toggle("active");
+}
+
+function closeSlide() {
+    if(hamburger.classList.contains("active")) {
+        hamburger.classList.remove("active");
+    }
+}
+
 let slidePosition = 2;
 const slides = document.getElementsByClassName('carousel-item');
 const totalSlides = slides.length;
