@@ -80,6 +80,17 @@ nav {
   cursor: pointer;
 }
 
+.hamburger-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--black);
+}
+
 .hamburger.active .hamburger-bar:nth-child(2) {
   opacity: 0;
 }
@@ -92,15 +103,72 @@ nav {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-.hamburger-bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  border-radius: 5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: var(--black);
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu-link {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat";
+  transition: 0.7s ease;
+  letter-spacing: 1px;
+  padding-left: 10px;
+}
+
+.menu-word {
+  color: var(--brown);
+}
+.menu-item__search {
+  width: 100%;
+  display: flex;
+  /* margin-top: 10px; */
+  /* margin-bottom: 16px 0; */
+}
+
+.input {
+  border: transparent;
+  font-family: "Montserrat";
+  letter-spacing: 2px;
+  padding-left: 10px;
+  flex: 1;
+}
+
+.search-button {
+  border-color: transparent;
+  width: 20px;
+  height: 20px;
+  background: white url(/images/3844432_magnifier_search_zoom_icon.svg)
+    no-repeat;
+}
+.menu {
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-start;
+  /* gap: 50px; */
+  position: fixed;
+  right: -120%;
+  top: 34px;
+  gap: 0;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  /* text-align: center; */
+  transition: 0.3s ease;
+}
+
+.menu-item, .menu-item__search {
+  /* width: 100%; */
+  margin: 14px 0;
+}
+
+.menu.active {
+  right: 0;
 }
 
 .carousel {
@@ -336,7 +404,6 @@ footer {
   text-transform: uppercase;
 }
 
-
 @keyframes slideToLeft {
   0% {
     right: 0%;
@@ -357,7 +424,7 @@ footer {
 
 @keyframes fadeVisibilityRight {
   0% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
   }
@@ -365,24 +432,24 @@ footer {
 
 @keyframes fadeVisibilityLeft {
   0% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
   }
 }
 
-@keyframes textFadeRight{
+@keyframes textFadeRight {
   0% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
   100% {
   }
 }
 
 @keyframes textFadeLeft {
-  0%{
-      transform: translateX(-100%);
+  0% {
+    transform: translateX(-100%);
   }
-  100%{
+  100% {
   }
 }

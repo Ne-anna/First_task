@@ -2,18 +2,22 @@
 const main = document.querySelector('main');
 const footer = document.querySelector('footer');
 const hamburger = document.querySelector(".hamburger");
+const navigationMenu = document.querySelector(".menu");
 
 hamburger.addEventListener('click', activeSlide);
+
 main.onclick = closeSlide;
 footer.onclick = closeSlide;
 
 function activeSlide() {
     hamburger.classList.toggle("active");
-    // navMenu.classList.toggle("active");
+    navigationMenu.classList.toggle("active");
 }
 
 function closeSlide() {
-    if(hamburger.classList.contains("active")) {
+    if(navigationMenu.classList.contains("active")) {
+        // console.log("its active, lets close it")
+        navigationMenu.classList.remove("active");
         hamburger.classList.remove("active");
     }
 }
