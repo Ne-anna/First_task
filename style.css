@@ -108,17 +108,16 @@ nav {
 }
 
 .menu-item {
-  /* width: 100%; */
+  width: 100%;
   border-top: solid 1px var(--lightgrey);
   display: flex;
   justify-content: space-between;
-  margin-right: 10px;
 }
 
 .menu-item,
 .menu-item--search {
   list-style: none;
-  padding: 14px 0;
+  padding: 18px 0;
 }
 
 .menu-item--search {
@@ -147,8 +146,12 @@ nav {
 
 .menu-next__button {
   background-color: transparent;
-  border-color: var(--lightgrey);
-  border-style: solid;
+  border: solid 1px var(--lightgrey);
+  margin-right: 8px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-next__button img {
@@ -158,9 +161,8 @@ nav {
 
 .menu-link {
   text-transform: uppercase;
-  font-weight: bold;
   font-family: "Axis";
-  color: black;
+  color: var(--black);
   text-decoration: none;
   transition: 0.7s ease;
   letter-spacing: 1px;
@@ -180,7 +182,7 @@ nav {
   top: 34px;
   gap: 0;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--white);
   transition: 0.3s ease;
 }
 
