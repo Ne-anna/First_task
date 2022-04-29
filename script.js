@@ -3,6 +3,7 @@ const main = document.querySelector('main');
 const footer = document.querySelector('footer');
 const hamburger = document.querySelector(".hamburger");
 const navigationMenu = document.querySelector(".menu");
+const body = document.querySelector("body");
 
 hamburger.addEventListener('click', activeSlide);
 
@@ -12,13 +13,22 @@ footer.onclick = closeSlide;
 function activeSlide() {
     hamburger.classList.toggle("active");
     navigationMenu.classList.toggle("active");
+    fixedBody();
 }
 
 function closeSlide() {
-    if(navigationMenu.classList.contains("active")) {
-        // console.log("its active, lets close it")
+    if (navigationMenu.classList.contains("active")) {
         navigationMenu.classList.remove("active");
         hamburger.classList.remove("active");
+        fixedBody();
+    }
+}
+
+function fixedBody() {
+    if (navigationMenu.classList.contains("active")) {
+        body.classList.add("fixed-body");
+    } else {
+        body.classList.remove("fixed-body");
     }
 }
 
