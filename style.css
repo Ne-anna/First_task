@@ -21,6 +21,7 @@
   --white: #ffffff;
   --coalblack: #1e2633;
   --grey: #404040;
+  --lightgrey: #d0d0d0;
   --darkergrey: #f7f7f7;
   --footerbackground: #edeff2;
   --black: #000000;
@@ -106,19 +107,18 @@ nav {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  color: black;
-  text-decoration: none;
+.menu-item {
+  /* width: 100%; */
+  border-top: solid 1px var(--lightgrey);
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
 }
 
 .menu-item,
 .menu-item--search {
-  /* width: 100%; */
-  margin: 14px 0;
+  list-style: none;
+  padding: 14px 0;
 }
 
 .menu-item--search {
@@ -128,24 +128,40 @@ a {
 
 .menu-item--search__input {
   border: transparent;
-  font-family: "Montserrat";
-  letter-spacing: 2px;
   padding-left: 10px;
   flex: 1;
+}
+
+.menu-item--search__input::placeholder {
+  color: var(--lightgrey);
+  letter-spacing: 2px;
+  font-family: "Montserrat";
 }
 
 .menu-item--search__button {
   border-color: transparent;
   width: 20px;
   height: 20px;
-  background: white url(/images/3844432_magnifier_search_zoom_icon.svg)
-    no-repeat;
+  background: url(/images/3844432_magnifier_search_zoom_icon.svg) no-repeat;
+}
+
+.menu-next__button {
+  background-color: transparent;
+  border-color: var(--lightgrey);
+  border-style: solid;
+}
+
+.menu-next__button img {
+  width: 15px;
+  height: 15px;
 }
 
 .menu-link {
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Montserrat";
+  font-family: "Axis";
+  color: black;
+  text-decoration: none;
   transition: 0.7s ease;
   letter-spacing: 1px;
   padding-left: 10px;
@@ -157,14 +173,14 @@ a {
 
 .menu {
   display: flex;
-  align-items: flex-start;
   position: fixed;
+  width: 100%;
+  margin-bottom: 0;
   right: -120%;
   top: 34px;
   gap: 0;
   flex-direction: column;
   background-color: white;
-  width: 100%;
   transition: 0.3s ease;
 }
 
