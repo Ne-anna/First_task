@@ -144,32 +144,42 @@ nav {
   background: url(/images/3844432_magnifier_search_zoom_icon.svg) no-repeat;
 }
 
-.menu-next__button {
-  background-color: transparent;
-  border: solid 1px var(--lightgrey);
-  margin-right: 8px;
-  padding: 0px;
+.menu-item--features {
+  width: 100%;
+  border-top: solid 1px var(--lightgrey);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.menu-next__button img {
-  width: 15px;
-  height: 15px;
+.menu-item--features__button {
+  background-color: transparent;
+  border: solid 1px var(--lightgrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  margin: 8px;
 }
 
-.menu-link {
+.menu-item--features__button img {
+  width: 17px;
+  height: 17px;
+}
+
+.menu-item__name {
   text-transform: uppercase;
   font-family: "Axis";
   color: var(--black);
   text-decoration: none;
   transition: 0.7s ease;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   padding-left: 10px;
 }
 
-.menu-link:hover {
+.menu-item__name:hover {
   color: var(--brown);
 }
 
