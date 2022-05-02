@@ -1,8 +1,8 @@
 
 const main = document.querySelector('main');
 const footer = document.querySelector('footer');
-const hamburger = document.querySelector(".hamburger");
-const navigationMenu = document.querySelector(".menu");
+const hamburger = document.querySelector(".navigation__hamburger");
+const navigationMenu = document.querySelector(".navigation__menu");
 const body = document.querySelector("body");
 
 hamburger.addEventListener('click', activeSlide);
