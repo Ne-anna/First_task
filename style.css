@@ -393,7 +393,7 @@ footer {
   background-color: var(--footerbackground);
 }
 
-.footer-title {
+.footer__title {
   font-size: 12px;
   line-height: 25px;
   text-transform: uppercase;
@@ -401,29 +401,33 @@ footer {
   color: var(--coalblack);
 }
 
-.footer-media {
+.footer__social-media {
   display: flex;
   justify-content: center;
   gap: 8px;
 }
 
-.footer-media__icon {
+.footer__icon {
   width: 30px;
 }
 
-.footer-logo {
+.footer__logo {
   font-family: "Pacifico";
+  font-weight: normal;
+  margin-bottom: 20px;
   font-size: 20px;
   letter-spacing: 2px;
   color: var(--coalblack);
 }
 
-.footer-copyright {
+.footer__copyright {
   font-size: 12px;
   letter-spacing: 1px;
   color: var(--coalblack);
   font-family: "Axis";
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
 }
 
 @keyframes slideToLeft {
