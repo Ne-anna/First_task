@@ -298,30 +298,30 @@ nav {
   flex-direction: column;
 }
 
-.about-image-grid {
+.about__image-grid {
   padding: 55px 0;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(7, 1fr);
 }
 
-.about-image-grid__back {
+.about__back-container {
   grid-area: 1 / 2 / 5 / 11;
 }
 
-.about-image-grid img {
+.about__image-grid img {
   width: 100%;
 }
 
-.about-image-grid__top {
+.about__front-container {
   grid-area: 4 / 1 / 8 / 10;
 }
 
-.about-text-container {
+.about__text-container {
   padding-bottom: 50px;
 }
 
-.about-title {
+.about__title {
   margin: 0;
   margin-bottom: 10px;
   font-size: 38px;
@@ -330,7 +330,7 @@ nav {
   font-family: "Axis";
 }
 
-.about-subtitle {
+.about__subtitle {
   margin-top: 0;
   font-size: 11px;
   letter-spacing: 1px;
@@ -339,7 +339,7 @@ nav {
   text-transform: uppercase;
 }
 
-.about-text {
+.about__paragraph {
   margin: 0;
   font-size: 12px;
   letter-spacing: 2px;
