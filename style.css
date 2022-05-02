@@ -150,7 +150,9 @@ nav {
 }
 
 .navigation__button--search {
-  border-color: transparent;
+  border: none;
+  margin-right: 8px;
+  padding: 0;
   width: 20px;
   height: 20px;
   background: url(/images/3844432_magnifier_search_zoom_icon.svg) no-repeat;
