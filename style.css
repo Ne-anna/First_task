@@ -134,11 +134,15 @@ nav {
 
 .navigation__item--search {
   border-top: none;
-  padding: 18px 0;
+  /* padding: 18px 0; */
+  align-items: center;
+  margin-bottom: 14px;
+  margin-top: 18px;
 }
 
 .navigation__input--search {
   border: transparent;
+  height: 38px;
   padding-left: 10px;
   flex: 1;
 }
