@@ -205,12 +205,32 @@ nav {
   height: 139vw;
 }
 
-.carousel .carousel-item {
+.carousel .carousel__item {
   position: absolute;
   width: 100%;
 }
 
-.carousel-item__hidden-right {
+.carousel .carousel__item--visible-right {
+  display: block;
+  z-index: 1;
+  animation: fadeVisibilityRight 1s;
+}
+
+.carousel .carousel__item--visible-left {
+  display: block;
+  z-index: 1;
+  animation: fadeVisibilityLeft 1s;
+}
+
+.carousel .carousel__item--visible-right .carousel__text {
+  animation: textFadeRight 2s;
+}
+
+.carousel .carousel__item--visible-left .carousel__text {
+  animation: textFadeLeft 2s;
+}
+
+.carousel__item--hidden-right {
   position: absolute;
   top: 0;
   left: -100%;
@@ -218,7 +238,7 @@ nav {
   animation: slideToRight 1s;
 }
 
-.carousel-item__hidden-left {
+.carousel__item--hidden-left {
   position: absolute;
   top: 0;
   right: -100%;
@@ -226,43 +246,12 @@ nav {
   animation: slideToLeft 1s;
 }
 
-.carousel img {
-  height: 100%;
-  width: 100%;
-}
-
-.carousel .carousel-item__visible-right {
-  display: block;
-  z-index: 1;
-  animation: fadeVisibilityRight 1s;
-}
-
-.carousel .carousel-item__visible-left {
-  display: block;
-  z-index: 1;
-  animation: fadeVisibilityLeft 1s;
-}
-
-.carousel .carousel-item__visible-right .carousel-item--text {
-  animation: textFadeRight 2s;
-}
-
-.carousel .carousel-item__visible-left .carousel-item--text {
-  animation: textFadeLeft 2s;
-}
-
-.carousel-button {
-  position: absolute;
-  z-index: 2;
-  bottom: 60px;
-}
-
-.carousel-item--text {
+.carousel__text {
   position: absolute;
   bottom: 170px;
 }
 
-.carousel-item--text__title {
+.carousel__title {
   color: var(--white);
   margin: 0;
   margin-left: 22px;
@@ -271,7 +260,7 @@ nav {
   font-family: "Axis";
 }
 
-.carousel-item--text__subtitle {
+.carousel__subtitle {
   color: var(--brown);
   margin-top: 10px;
   margin-left: 22px;
@@ -280,19 +269,27 @@ nav {
   font-family: "Montserrat";
 }
 
-.button-arrow {
+.carousel img {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel__navigation {
+  position: absolute;
+  z-index: 2;
+  bottom: 60px;
+}
+
+.carousel__button {
   background-color: transparent;
+  justify-items: center;
+  align-items: center;
   border-color: var(--white);
   margin-top: 50px;
   margin-left: 22px;
   width: 60px;
   height: 60px;
   border-style: solid;
-}
-
-.button-arrow {
-  justify-items: center;
-  align-items: center;
 }
 
 .about {

@@ -33,13 +33,13 @@ function fixedBody() {
 }
 
 let slidePosition = 2;
-const slides = document.getElementsByClassName('carousel-item');
+const slides = document.getElementsByClassName('carousel__item');
 const totalSlides = slides.length;
 
-const nextButton = document.getElementById('carousel_button-next');
+const nextButton = document.getElementById('carousel__button--next');
 nextButton.addEventListener('click', moveToNextSlide)
 
-const previousButton = document.getElementById('carousel_button-previous');
+const previousButton = document.getElementById('carousel__button--previous');
 previousButton.addEventListener('click', moveToPrevSlide);
 
 function moveToNextSlide() {
@@ -62,26 +62,26 @@ function moveToPrevSlide() {
 
 function updateSlidePositionRight() {
     for (let slide of slides) {
-        slide.classList.remove('carousel-item__visible-right');
-        slide.classList.remove('carousel-item__visible-left');
-        slide.classList.remove('carousel-item__hidden-left');
-        slide.classList.add('carousel-item__hidden-right');
+        slide.classList.remove('carousel__item--visible-right');
+        slide.classList.remove('carousel__item--visible-left');
+        slide.classList.remove('carousel__item--hidden-left');
+        slide.classList.add('carousel__item--hidden-right');
     }
-    slides[slidePosition].classList.add('carousel-item__visible-right');
-    slides[slidePosition].classList.remove('carousel-item__hidden-left');
-    slides[slidePosition].classList.remove('carousel-item__visible-left');
-    slides[slidePosition].classList.remove('carousel-item__hidden-right');    
+    slides[slidePosition].classList.add('carousel__item--visible-right');
+    slides[slidePosition].classList.remove('carousel__item--hidden-left');
+    slides[slidePosition].classList.remove('carousel__item--visible-left');
+    slides[slidePosition].classList.remove('carousel__item--hidden-right');    
 }
 
 function updateSlidePositionLeft() {
     for (let slide of slides) {
-        slide.classList.remove('carousel-item__visible-left');
-        slide.classList.remove('carousel-item__visible-right');
-        slide.classList.remove('carousel-item__hidden-right');
-        slide.classList.add('carousel-item__hidden-left');
+        slide.classList.remove('carousel__item--visible-left');
+        slide.classList.remove('carousel__item--visible-right');
+        slide.classList.remove('carousel__item--hidden-right');
+        slide.classList.add('carousel__item--hidden-left');
     }
-    slides[slidePosition].classList.add('carousel-item__visible-left');
-    slides[slidePosition].classList.remove('carousel-item__hidden-left');
-    slides[slidePosition].classList.remove('carousel-item__visible-right');
-    slides[slidePosition].classList.remove('carousel-item__hidden-right');   
+    slides[slidePosition].classList.add('carousel__item--visible-left');
+    slides[slidePosition].classList.remove('carousel__item--hidden-left');
+    slides[slidePosition].classList.remove('carousel__item--visible-right');
+    slides[slidePosition].classList.remove('carousel__item--hidden-right');   
 }
