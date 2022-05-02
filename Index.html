@@ -5,68 +5,98 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../script.js" defer></script>
     <title>Renome restaurant</title>
   </head>
 
   <body>
     <header>
       <nav>
-        <p class="navigation-logo">Renome</p>
-        <div class="navigation-right">
+        <h2 class="navigation--left">Renome</h2>
+        <div class="navigation--right">
           <img
-            class="navigation-right__cart"
+            class="navigation__cart"
             src="/images/cart-shopping-solid.svg"
             alt="shopping cart icon"
           />
-          <p class="navigation-right__count">2</p>
+          <p class="navigation__count">2</p>
           <img
-            class="navigation-right__divide"
+            class="navigation__divide"
             src="/images/9034432_divider_vertical_icon.svg"
             alt="divider icon"
           />
-          <img
-            class="naviagtion-right__burger"
-            src="/images/6351905_burger_checklist_list_menu_navigation_icon.svg"
-            alt="burger menu icon"
-          />
+          <div class="navigation__hamburger">
+            <span class="navigation__hamburger-bar"></span>
+            <span class="navigation__hamburger-bar"></span>
+            <span class="navigation__hamburger-bar"></span>
+          </div>
+
+          <ul class="navigation__menu">
+            <li class="navigation__item navigation__item--search">
+              <input placeholder="Search..." class="navigation__input--search" />
+              <button class="navigation__button--search"></button>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">home</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">about</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">menu</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">reservations</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">blog</a>
+            </li>
+            <li class="navigation__item navigation__item--features">
+              <a href="#" class="navigation__link">features</a>
+              <button class="navigation__button--features">
+                <img src="/images/black_arrow.svg">
+              </button>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">shop</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">contact</a>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
 
     <main>
       <div class="carousel">
-        <div class="carousel-item">
-          <div class="carousel-item--text">
-            <h2 class="carousel-item--text__title">made with love</h2>
-            <h5 class="carousel-item--text__subtitle">for you</h5>
+        <div class="carousel__item">
+          <div class="carousel__text">
+            <h2 class="carousel__title">made with love</h2>
+            <h5 class="carousel__subtitle">for you</h5>
           </div>
-          <img
-            src="/images/carousel_img_1.png"
-            alt="eggs and chicken"
-          />
+          <img src="/images/carousel_img_1.png" alt="eggs and chicken" />
         </div>
-        <div class="carousel-item">
-          <div  class="carousel-item--text">
-            <h2 class="carousel-item--text__title">Made with hate</h2>
-            <h5 class="carousel-item--text__subtitle">for myself</h5>
+        <div class="carousel__item">
+          <div class="carousel__text">
+            <h2 class="carousel__title">Made with hate</h2>
+            <h5 class="carousel__subtitle">for myself</h5>
           </div>
-          <img src="/images/carousel_img_2.png"
-          alt="something more">
+          <img src="/images/carousel_img_2.png" alt="something more" />
         </div>
-        <div class="carousel-item">
-          <div  class="carousel-item--text">
-            <h2 class="carousel-item--text__title">Oranges and laptops</h2>
-            <h5 class="carousel-item--text__subtitle">for everyone</h5>
+        <div class="carousel__item">
+          <div class="carousel__text">
+            <h2 class="carousel__title">Oranges and laptops</h2>
+            <h5 class="carousel__subtitle">for everyone</h5>
           </div>
-          <img src="/images/carousel_img_3.png"
-          alt="oranges and laptops">
+          <img src="/images/carousel_img_3.png" alt="oranges and laptops" />
         </div>
 
-        <div class="carousel-button">
-          <button id="carousel_button-previous" class="button-arrow">
+        <div class="carousel__navigation">
+          <button id="carousel__button--previous" class="carousel__button">
             <img src="/images/left_arrow_icon.svg" alt="arrow left" />
           </button>
-          <button id="carousel_button-next" class="button-arrow">
+          <button id="carousel__button--next" class="carousel__button">
             <img src="/images/right_arrow_icon.svg" alt="arrow right" />
           </button>
         </div>
@@ -74,14 +104,11 @@
 
       <article>
         <div class="about">
-          <div class="about-image-grid">
-            <div class="about-image-grid__back">
-              <img 
-              src="/images/about_img_2.png"
-              alt="white house from afar"
-              />
+          <div class="about__image-grid">
+            <div class="about__back-container">
+              <img src="/images/about_img_2.png" alt="white house from afar" />
             </div>
-            <div class="about-image-grid__top">
+            <div class="about__front-container">
               <img
                 src="/images/about_img_1.png"
                 alt="close-up second house floor window"
@@ -89,10 +116,10 @@
             </div>
           </div>
 
-          <div class="about-text-container">
-            <h1 class="about-title">about</h1>
-            <h5 class="about-subtitle">We create delicious memories</h5>
-            <p class="about-text">
+          <div class="about__text-container">
+            <h1 class="about__title">about</h1>
+            <h5 class="about__subtitle">We create delicious memories</h5>
+            <p class="about__paragraph">
               Renome it is renowned restaurant delights the senses with elegant
               ambiance, gracious service and delectable menus in the heart of
               Manhattan’s. The distinctive setting boasts contemporary
@@ -107,36 +134,36 @@
       </article>
 
       <div class="gallery">
-        <h1 class="gallery-heading">gallery</h1>
-        <h5 class="gallery-subheading">More about us via photos</h5>
-        <div class="gallery-container">
+        <h1 class="gallery__title">gallery</h1>
+        <h5 class="gallery__subtitle">More about us via photos</h5>
+        <div class="gallery__image-container">
           <img
-            class="gallery-container__image"
+            class="gallery__image"
             src="/images/gallery_img_1.png"
             alt="cafe entrance"
           />
           <img
-            class="gallery-container__image"
+            class="gallery__image"
             src="/images/gallery_img_3.png"
             alt="inside of cafe with tables"
           />
           <img
-            class="gallery-container__image"
+            class="gallery__image"
             src="/images/gallery_img_2.png"
             alt="historical brick house with windows"
           />
           <img
-            class="gallery-container__image"
+            class="gallery__image"
             src="/images/gallery_img_6.png"
             alt="fried cottage cheese balls"
           />
           <img
-            class="gallery-container__image"
+            class="gallery__image"
             src="/images/gallery_img_5.png"
             alt="bowl with salad"
           />
           <img
-            class="gallery-container__image"
+            class="gallery__image"
             src="/images/gallery_img_4.png"
             alt="sidewalk cafe menu board"
           />
@@ -145,33 +172,32 @@
     </main>
 
     <footer>
-      <h5 class="footer-title">Follow us:</h5>
-      <div class="footer-media">
+      <h5 class="footer__title">Follow us:</h5>
+      <div class="footer__social-media">
         <a href="https://www.facebook.com/">
           <img
-            class="footer-media__icon"
+            class="footer__icon"
             src="/images/734399_facebook_media_online_social_icon.svg"
             alt="socail media facebook icon"
           />
         </a>
         <a href="https://twitter.com">
           <img
-            class="footer-media__icon"
+            class="footer__icon"
             src="/images/734377_media_online_social_twitter_icon.svg"
             alt="socail media twitter icon"
           />
         </a>
         <a href="https://google.com">
           <img
-            class="footer-media__icon"
+            class="footer__icon"
             src="/images/657788_circles_google_google+_line_neon_icon.svg"
             alt="socail media google icon"
           />
         </a>
       </div>
-      <p class="footer-logo">Renome</p>
-      <p class="footer-copyright">Copyright 2022 renome by estetiq</p>
+      <h2 class="footer__logo">Renome</h2>
+      <h5 class="footer__copyright">Copyright 2022 renome by estetiq</h5>
     </footer>
-    <script src="../script.js"></script>
   </body>
 </html>
