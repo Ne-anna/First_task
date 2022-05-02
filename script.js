@@ -32,6 +32,18 @@ function fixedBody() {
     }
 }
 
+const cart = document.querySelector('.navigation__cart');
+const addToCart = document.querySelector('.cart');
+cart.addEventListener('click', openCart)
+
+function openCart() {
+    if(addToCart.classList.contains("active")) {
+        addToCart.classList.remove("active")
+    } else {
+        addToCart.classList.add("active");
+    }
+}
+
 let slidePosition = 2;
 const slides = document.getElementsByClassName('carousel__item');
 const totalSlides = slides.length;
