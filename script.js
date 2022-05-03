@@ -6,30 +6,30 @@ const navigationMenu = document.querySelector(".navigation__menu");
 const body = document.querySelector("body");
 const cart = document.querySelector('.navigation__cart');
 const addToCart = document.querySelector('.cart');
+const nextNavigationButton = document.querySelector('.navigation__button--features');
+const backNavigationButton = document.querySelector('.sub-navigation__button--back');
+const backNavigationWord = document.querySelector('.sub-navigation__text--back');
+const subMenu = document.querySelector('.sub-navigation');
 
 hamburger.addEventListener('click', activeSlide);
-
-main.onclick = () => {
-   hamburger.classList.remove("active");
-   navigationMenu.classList.remove("active");
-   addToCart.classList.remove("active");
-   body.classList.remove("fixed-body");
-}
-
-footer.onclick = () => {
-    hamburger.classList.remove("active");
-    navigationMenu.classList.remove("active");
-    addToCart.classList.remove("active");
-    body.classList.remove("fixed-body");
-}
-
 cart.addEventListener('click', openCart);
 
 function activeSlide() {
+    if (subMenu.classList.contains("active")) {
+        closeAll();
+    } else {
     hamburger.classList.toggle("active");
     navigationMenu.classList.toggle("active");
     addToCart.classList.remove("active");
     fixedBody();
+    }
+}
+
+function closeAll() {
+    hamburger.classList.remove("active");
+    navigationMenu.classList.remove("active");
+    subMenu.classList.remove("active");
+    body.classList.remove("fixed-body");
 }
 
 function openCart() {
@@ -37,6 +37,7 @@ function openCart() {
     navigationMenu.classList.remove("active");
     hamburger.classList.remove("active");
     body.classList.remove("fixed-body");
+    subMenu.classList.remove("active");
 }
 
 function fixedBody() {
@@ -46,6 +47,39 @@ function fixedBody() {
         body.classList.remove("fixed-body");
     }
 }
+
+main.onclick = () => {
+    hamburger.classList.remove("active");
+    navigationMenu.classList.remove("active");
+    addToCart.classList.remove("active");
+    body.classList.remove("fixed-body");
+    subMenu.classList.remove("active");
+}
+ 
+footer.onclick = () => {
+     hamburger.classList.remove("active");
+     navigationMenu.classList.remove("active");
+     addToCart.classList.remove("active");
+     body.classList.remove("fixed-body");
+}
+
+nextNavigationButton.onclick = () => {
+    fixedBody();
+    subMenu.classList.add("active");
+    navigationMenu.classList.remove("active");
+}
+
+backNavigationButton.onclick = () => {
+    fixedBody();
+    navigationMenu.classList.add("active");
+    subMenu.classList.remove("active");
+}
+
+backNavigationWord.onclick = () => {
+    navigationMenu.classList.add("active");
+    subMenu.classList.remove("active");
+}
+
 let slidePosition = 2;
 const slides = document.getElementsByClassName('carousel__item');
 const totalSlides = slides.length;
