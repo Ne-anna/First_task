@@ -4,15 +4,25 @@ const footer = document.querySelector('footer');
 const hamburger = document.querySelector(".navigation__hamburger");
 const navigationMenu = document.querySelector(".navigation__menu");
 const body = document.querySelector("body");
+const cart = document.querySelector('.navigation__cart');
+const addToCart = document.querySelector('.cart');
 
 hamburger.addEventListener('click', activeSlide);
 
-main.onclick = closeSlide;
+main.onclick = () => {
+   hamburger.classList.remove("active");
+   navigationMenu.classList.remove("active");
+   addToCart.classList.remove("active");
+}
+
 footer.onclick = closeSlide;
+
+cart.addEventListener('click', openCart);
 
 function activeSlide() {
     hamburger.classList.toggle("active");
     navigationMenu.classList.toggle("active");
+    addToCart.classList.remove("active");
     fixedBody();
 }
 
@@ -24,6 +34,18 @@ function closeSlide() {
     }
 }
 
+function openCart() {
+    addToCart.classList.toggle("active");
+    navigationMenu.classList.remove("active");
+    hamburger.classList.remove("active");
+}
+
+function closeCart() {
+    if(addToCart.classList.contains("active")) {
+        addToCart.classList.remove("active");
+    }
+}
+
 function fixedBody() {
     if (navigationMenu.classList.contains("active")) {
         body.classList.add("fixed-body");
@@ -31,19 +53,6 @@ function fixedBody() {
         body.classList.remove("fixed-body");
     }
 }
-
-const cart = document.querySelector('.navigation__cart');
-const addToCart = document.querySelector('.cart');
-cart.addEventListener('click', openCart)
-
-function openCart() {
-    if(addToCart.classList.contains("active")) {
-        addToCart.classList.remove("active")
-    } else {
-        addToCart.classList.add("active");
-    }
-}
-
 let slidePosition = 2;
 const slides = document.getElementsByClassName('carousel__item');
 const totalSlides = slides.length;
