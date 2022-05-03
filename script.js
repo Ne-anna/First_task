@@ -13,9 +13,15 @@ main.onclick = () => {
    hamburger.classList.remove("active");
    navigationMenu.classList.remove("active");
    addToCart.classList.remove("active");
+   body.classList.remove("fixed-body");
 }
 
-footer.onclick = closeSlide;
+footer.onclick = () => {
+    hamburger.classList.remove("active");
+    navigationMenu.classList.remove("active");
+    addToCart.classList.remove("active");
+    body.classList.remove("fixed-body");
+}
 
 cart.addEventListener('click', openCart);
 
@@ -26,24 +32,11 @@ function activeSlide() {
     fixedBody();
 }
 
-function closeSlide() {
-    if (navigationMenu.classList.contains("active")) {
-        navigationMenu.classList.remove("active");
-        hamburger.classList.remove("active");
-        fixedBody();
-    }
-}
-
 function openCart() {
     addToCart.classList.toggle("active");
     navigationMenu.classList.remove("active");
     hamburger.classList.remove("active");
-}
-
-function closeCart() {
-    if(addToCart.classList.contains("active")) {
-        addToCart.classList.remove("active");
-    }
+    body.classList.remove("fixed-body");
 }
 
 function fixedBody() {

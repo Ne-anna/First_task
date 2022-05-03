@@ -220,9 +220,9 @@ nav {
   top: 100%;
 }
 
-/* .cart__item {
+.cart__item {
   width: 100%;
-} */
+}
 
 .cart__item:hover {
   color: var(--brown);
