@@ -233,7 +233,7 @@ nav {
   text-align: center;
   justify-content: center;
   margin: 0;
-  padding: 20px 10px;
+  padding: 18px 10px;
   letter-spacing: 1px;
   font-weight: bolder;
 }
@@ -258,25 +258,19 @@ nav {
 }
 
 .sub-navigation__item {
-  font-family: "Axis";
-  color: var(--black);
-  transition: 0.7s ease;
+  width: 100%;
   border-top: solid 1px var(--lightgrey);
-  letter-spacing: 2px;
-  padding: 18px 0px;
+  display: flex;
+  list-style: none;
   padding-left: 10px;
 }
 
-.sub-navigation__item:hover {
-  color: var(--brown);
-}
-
 .sub-navigation__item--back {
-  display: flex;
   border: none;
   justify-content: space-between;
-  padding-bottom: 0;
-  padding-right: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  padding-top: 20px;
 }
 
 .sub-navigation__button--back {
@@ -288,11 +282,29 @@ nav {
   padding: 0;
   width: 44px;
   height: 44px;
-  margin-right: 8px;
 }
+
 .sub-navigation__button--back img {
   width: 17px;
   height: 17px;
+}
+
+.sub-navigation__text {
+  font-family: "Axis";
+  color: var(--black);
+  text-decoration: none;
+  transition: 0.7s ease;
+  margin: 0;
+  letter-spacing: 2px;
+  padding: 18px 0px;
+}
+
+.sub-navigation__text:hover {
+  color: var(--brown);
+}
+
+.sub-navigation__text--back {
+    margin-right: 35px;
 }
 
 .carousel {
