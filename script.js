@@ -4,24 +4,39 @@ const footer = document.querySelector('footer');
 const hamburger = document.querySelector(".navigation__hamburger");
 const navigationMenu = document.querySelector(".navigation__menu");
 const body = document.querySelector("body");
+const cart = document.querySelector('.navigation__cart');
+const addToCart = document.querySelector('.cart');
 
 hamburger.addEventListener('click', activeSlide);
 
-main.onclick = closeSlide;
-footer.onclick = closeSlide;
+main.onclick = () => {
+   hamburger.classList.remove("active");
+   navigationMenu.classList.remove("active");
+   addToCart.classList.remove("active");
+   body.classList.remove("fixed-body");
+}
+
+footer.onclick = () => {
+    hamburger.classList.remove("active");
+    navigationMenu.classList.remove("active");
+    addToCart.classList.remove("active");
+    body.classList.remove("fixed-body");
+}
+
+cart.addEventListener('click', openCart);
 
 function activeSlide() {
     hamburger.classList.toggle("active");
     navigationMenu.classList.toggle("active");
+    addToCart.classList.remove("active");
     fixedBody();
 }
 
-function closeSlide() {
-    if (navigationMenu.classList.contains("active")) {
-        navigationMenu.classList.remove("active");
-        hamburger.classList.remove("active");
-        fixedBody();
-    }
+function openCart() {
+    addToCart.classList.toggle("active");
+    navigationMenu.classList.remove("active");
+    hamburger.classList.remove("active");
+    body.classList.remove("fixed-body");
 }
 
 function fixedBody() {
@@ -31,7 +46,6 @@ function fixedBody() {
         body.classList.remove("fixed-body");
     }
 }
-
 let slidePosition = 2;
 const slides = document.getElementsByClassName('carousel__item');
 const totalSlides = slides.length;
