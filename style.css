@@ -25,6 +25,9 @@
   --darkergrey: #f7f7f7;
   --footerbackground: #edeff2;
   --black: #000000;
+  --pacifico: "Pacifico";
+  --axis: "Axis";
+  --montserrat: "Montserrat";
 }
 
 body {
@@ -49,7 +52,7 @@ nav {
 }
 
 .navigation--left {
-  font-family: "Pacifico";
+  font-family: var(--pacifico);
   font-size: 25px;
   font-weight: normal;
   letter-spacing: 3px;
@@ -149,7 +152,7 @@ nav {
 .navigation__input--search::placeholder {
   color: var(--lightgrey);
   letter-spacing: 2px;
-  font-family: "Montserrat";
+  font-family: var(--montserrat);
 }
 
 .navigation__button--search {
@@ -188,7 +191,7 @@ nav {
 
 .navigation__link {
   text-transform: uppercase;
-  font-family: "Axis";
+  font-family: var(--montserrat);
   color: var(--black);
   text-decoration: none;
   transition: 0.7s ease;
@@ -229,7 +232,7 @@ nav {
 }
 
 .cart__text {
-  font-family: "Montserrat";
+  font-family: var(--montserrat);
   text-align: center;
   justify-content: center;
   margin: 0;
@@ -290,7 +293,7 @@ nav {
 }
 
 .sub-navigation__text {
-  font-family: "Axis";
+  font-family: var(--montserrat);
   color: var(--black);
   text-decoration: none;
   transition: 0.7s ease;
@@ -363,21 +366,21 @@ nav {
 }
 
 .carousel__title {
+  font-family:var(--axis);
   color: var(--white);
   margin: 0;
   margin-left: 22px;
   font-size: 28px;
   letter-spacing: 3px;
-  font-family: "Axis";
 }
 
 .carousel__subtitle {
+  font-family: var(--montserrat);
   color: var(--brown);
   margin-top: 10px;
   margin-left: 22px;
   font-size: 22px;
   letter-spacing: 2px;
-  font-family: "Montserrat";
 }
 
 .carousel img {
@@ -433,30 +436,30 @@ nav {
 }
 
 .about__title {
+  font-family: var(--axis);
   margin: 0;
   margin-bottom: 10px;
   font-size: 38px;
   letter-spacing: 8px;
   color: var(--coalblack);
-  font-family: "Axis";
 }
 
 .about__subtitle {
+  font-family: var(--montserrat);
   margin-top: 0;
   font-size: 11px;
   letter-spacing: 1px;
   color: var(--brown);
-  font-family: "Montserrat";
   text-transform: uppercase;
 }
 
 .about__paragraph {
+  font-family: var(--montserrat);
   margin: 0;
   font-size: 12px;
   letter-spacing: 2px;
   line-height: 30px;
   color: var(--grey);
-  font-family: "Montserrat";
 }
 
 .gallery {
@@ -468,15 +471,16 @@ nav {
 }
 
 .gallery__title {
+  font-family: var(--axis);
   margin: 0;
   margin-top: 70px;
   font-size: 38px;
   letter-spacing: 8px;
   color: var(--coalblack);
-  font-family: "Axis";
 }
 
 .gallery__subtitle {
+  font-family: var(--montserrat);
   margin: 0;
   padding-bottom: 20px;
   font-size: 11px;
@@ -484,7 +488,6 @@ nav {
   line-height: 25px;
   color: var(--brown);
   text-transform: uppercase;
-  font-family: "Montserrat";
 }
 
 .gallery__image-container {
@@ -505,10 +508,10 @@ footer {
 }
 
 .footer__title {
+  font-family: var(--montserrat);
   font-size: 12px;
   line-height: 25px;
   text-transform: uppercase;
-  font-family: "Montserrat";
   color: var(--coalblack);
 }
 
@@ -523,7 +526,7 @@ footer {
 }
 
 .footer__logo {
-  font-family: "Pacifico";
+  font-family: var(--pacifico);
   font-weight: normal;
   margin-bottom: 20px;
   font-size: 20px;
@@ -532,10 +535,10 @@ footer {
 }
 
 .footer__copyright {
+  font-family: var(--axis);
   font-size: 12px;
   letter-spacing: 1px;
   color: var(--coalblack);
-  font-family: "Axis";
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
