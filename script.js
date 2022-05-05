@@ -11,7 +11,7 @@ const backSubnavigationButton = document.querySelector('.sub-navigation__button-
 const backSubnavigationWord = document.querySelector('.sub-navigation__text--back');
 const subMenu = document.querySelector('.sub-navigation');
 
-function activeSlide() {
+function currentSlide() {
     if (subMenu.classList.contains("active")) {
         closeAll();
     } else {
@@ -45,7 +45,7 @@ function closeSubNavigation  () {
 }
 
 hamburger.onclick = () => {
-    activeSlide();
+    currentSlide();
 }
 
 cart.onclick = () => {
