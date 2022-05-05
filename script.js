@@ -7,12 +7,11 @@ const body = document.querySelector("body");
 const cart = document.querySelector('.navigation__cart');
 const addToCart = document.querySelector('.cart');
 const nextNavigationButton = document.querySelector('.navigation__button--features');
-const backNavigationButton = document.querySelector('.sub-navigation__button--back');
-const backNavigationWord = document.querySelector('.sub-navigation__text--back');
+const backSubnavigationButton = document.querySelector('.sub-navigation__button--back');
+const backSubnavigationWord = document.querySelector('.sub-navigation__text--back');
 const subMenu = document.querySelector('.sub-navigation');
 
 hamburger.addEventListener('click', activeSlide);
-cart.addEventListener('click', openCart);
 
 function activeSlide() {
     if (subMenu.classList.contains("active")) {
@@ -32,13 +31,6 @@ function closeAll() {
     body.classList.remove("fixed-body");
 }
 
-function openCart() {
-    addToCart.classList.toggle("active");
-    navigationMenu.classList.remove("active");
-    hamburger.classList.remove("active");
-    body.classList.remove("fixed-body");
-    subMenu.classList.remove("active");
-}
 
 function fixedBody() {
     if (navigationMenu.classList.contains("active")) {
@@ -55,7 +47,15 @@ main.onclick = () => {
     body.classList.remove("fixed-body");
     subMenu.classList.remove("active");
 }
- 
+
+cart.onclick = () => {
+    addToCart.classList.toggle("active");
+    navigationMenu.classList.remove("active");
+    hamburger.classList.remove("active");
+    body.classList.remove("fixed-body");
+    subMenu.classList.remove("active");
+}
+
 footer.onclick = () => {
      hamburger.classList.remove("active");
      navigationMenu.classList.remove("active");
@@ -69,13 +69,13 @@ nextNavigationButton.onclick = () => {
     navigationMenu.classList.remove("active");
 }
 
-backNavigationButton.onclick = () => {
+backSubnavigationButton.onclick = () => {
     fixedBody();
     navigationMenu.classList.add("active");
     subMenu.classList.remove("active");
 }
 
-backNavigationWord.onclick = () => {
+backSubnavigationWord.onclick = () => {
     navigationMenu.classList.add("active");
     subMenu.classList.remove("active");
 }
@@ -88,7 +88,7 @@ const nextButton = document.getElementById('carousel__button--next');
 nextButton.addEventListener('click', moveToNextSlide)
 
 const previousButton = document.getElementById('carousel__button--previous');
-previousButton.addEventListener('click', moveToPrevSlide);
+previousButton.addEventListener('click', moveToPreviousSlide);
 
 function moveToNextSlide() {
     if (slidePosition === totalSlides - 1) {
@@ -99,7 +99,7 @@ function moveToNextSlide() {
     updateSlidePositionRight();
  }
 
-function moveToPrevSlide() {
+function moveToPreviousSlide() {
     if(slidePosition === 0) {
         slidePosition = totalSlides - 1;
     } else {
