@@ -390,6 +390,9 @@ nav {
 
 .carousel__navigation {
   position: absolute;
+  display: flex;
+  gap:15px;
+  margin-left: 22px;
   z-index: 2;
   bottom: 60px;
 }
@@ -398,12 +401,15 @@ nav {
   background-color: transparent;
   justify-items: center;
   align-items: center;
-  border-color: var(--white);
   margin-top: 50px;
-  margin-left: 22px;
   width: 60px;
   height: 60px;
-  border-style: solid;
+  border: 2px solid var(--white);
+}
+
+.carousel__button img {
+  width: 28px;
+  height: 28px;
 }
 
 .about {
