@@ -196,7 +196,7 @@ nav {
   text-decoration: none;
   transition: 0.7s ease;
   letter-spacing: 2px;
-  padding: 18px 0px;
+  padding: 18px 0;
   padding-left: 10px;
 }
 
@@ -299,7 +299,7 @@ nav {
   transition: 0.7s ease;
   margin: 0;
   letter-spacing: 2px;
-  padding: 18px 0px;
+  padding: 18px 0;
 }
 
 .sub-navigation__text:hover {
