@@ -11,9 +11,7 @@ const backSubnavigationButton = document.querySelector('.sub-navigation__button-
 const backSubnavigationWord = document.querySelector('.sub-navigation__text--back');
 const subMenu = document.querySelector('.sub-navigation');
 
-hamburger.addEventListener('click', activeSlide);
-
-function activeSlide() {
+function currentSlide() {
     if (subMenu.classList.contains("active")) {
         closeAll();
     } else {
@@ -29,8 +27,9 @@ function closeAll() {
     navigationMenu.classList.remove("active");
     subMenu.classList.remove("active");
     body.classList.remove("fixed-body");
+    addToCart.classList.remove("active");
+    
 }
-
 
 function fixedBody() {
     if (navigationMenu.classList.contains("active")) {
@@ -40,27 +39,29 @@ function fixedBody() {
     }
 }
 
-main.onclick = () => {
-    hamburger.classList.remove("active");
-    navigationMenu.classList.remove("active");
-    addToCart.classList.remove("active");
-    body.classList.remove("fixed-body");
+function closeSubNavigation  () {
+    navigationMenu.classList.add("active");
     subMenu.classList.remove("active");
+}
+
+hamburger.onclick = () => {
+    currentSlide();
 }
 
 cart.onclick = () => {
     addToCart.classList.toggle("active");
     navigationMenu.classList.remove("active");
     hamburger.classList.remove("active");
-    body.classList.remove("fixed-body");
+    body.classList.add("fixed-body");
     subMenu.classList.remove("active");
 }
 
+main.onclick = () => {
+   closeAll();
+}
+
 footer.onclick = () => {
-     hamburger.classList.remove("active");
-     navigationMenu.classList.remove("active");
-     addToCart.classList.remove("active");
-     body.classList.remove("fixed-body");
+    closeAll();
 }
 
 nextNavigationButton.onclick = () => {
@@ -70,14 +71,11 @@ nextNavigationButton.onclick = () => {
 }
 
 backSubnavigationButton.onclick = () => {
-    fixedBody();
-    navigationMenu.classList.add("active");
-    subMenu.classList.remove("active");
+    closeSubNavigation();
 }
 
 backSubnavigationWord.onclick = () => {
-    navigationMenu.classList.add("active");
-    subMenu.classList.remove("active");
+    closeSubNavigation();
 }
 
 let slidePosition = 2;
@@ -85,10 +83,14 @@ const slides = document.getElementsByClassName('carousel__item');
 const totalSlides = slides.length;
 
 const nextButton = document.getElementById('carousel__button--next');
-nextButton.addEventListener('click', moveToNextSlide)
+nextButton.onclick = () => {
+    moveToNextSlide();
+}
 
 const previousButton = document.getElementById('carousel__button--previous');
-previousButton.addEventListener('click', moveToPreviousSlide);
+previousButton.onclick = () => {
+    moveToPreviousSlide();
+}
 
 function moveToNextSlide() {
     if (slidePosition === totalSlides - 1) {
@@ -97,7 +99,7 @@ function moveToNextSlide() {
         slidePosition++;
     }
     updateSlidePositionRight();
- }
+}
 
 function moveToPreviousSlide() {
     if(slidePosition === 0) {
